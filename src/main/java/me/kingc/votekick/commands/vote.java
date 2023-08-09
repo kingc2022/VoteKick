@@ -142,6 +142,7 @@ public class vote implements CommandExecutor {
 
                                 // 启动计时器，每秒执行一次
                                 timerTask.runTaskTimer(VoteKick.getPlugin(VoteKick.class), 0L, 20L);
+                                Bukkit.broadcastMessage(prefix + "§6有玩家发起了对 §c" + kick_player.getName() + " §6的踢出投票，如果您赞成，请输入 /vote");
                                 sender.sendMessage(prefix + "§a已开始对 " + args[1] + " 的踢出投票");
                             }
                         } else {
