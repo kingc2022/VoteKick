@@ -29,4 +29,6 @@
 > /vote reload 重新加载配置文件 
 >
 > /vote 投票踢出玩家
+> 
+> /vote help 查看帮助
 
