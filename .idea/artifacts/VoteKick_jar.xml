@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="VoteKick:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/VoteKick_jar</output-path>
+    <root id="archive" name="VoteKick.jar">
+      <element id="module-output" name="VoteKick" />
+      <element id="file-copy" path="$PROJECT_DIR$/config.yml" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,26 @@
+name: VoteKick
+version: 1.0
+main: me.kingc.votekick.VoteKick
+api-version: '1.20'
+author: kingc
+
+commands:
+  vote:
+    description: VoteKick
+
+permissions:
+  votekick.reload:
+    description: 重新加载配置文件
+    default: op
+  votekick.start:
+    description: 开启踢出玩家的投票
+    default: true
+  votekick.stop:
+    description: 强制关闭当前投票
+    default: op
+  votekick.vote:
+    description: 投票踢出
+    default: true
+  votekick.bypass:
+    description: 豁免踢出
+    default: false
