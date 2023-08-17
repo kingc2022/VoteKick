@@ -18,6 +18,7 @@ public class vote implements CommandExecutor {
     int votes = 0;
     Player kick_player;
     boolean is_voting = false;
+    TimerTask timerTask;
     ArrayList<Player> voted_players = new ArrayList<>();
 
     Plugin config = me.kingc.votekick.VoteKick.getProvidingPlugin(me.kingc.votekick.VoteKick.class);
@@ -59,7 +60,7 @@ public class vote implements CommandExecutor {
             } else {
                 for (Integer integer : list) {
                     if (seconds == integer) {
-                        Bukkit.broadcastMessage(prefix + "§e还有 §c" + seconds + " §e秒对玩家 §c" + kick_player.getName() + " §e的踢出投票结束");
+                        Bukkit.broadcastMessage(prefix + "§6还有 §c" + seconds + " §6秒对玩家 §c" + kick_player.getName() + " §6的踢出投票结束");
                     }
                 }
             }
@@ -118,6 +119,7 @@ public class vote implements CommandExecutor {
                         is_voting = false;
                         votes = 0;
                         voted_players.clear();
+                        timerTask.cancel();
                         sender.sendMessage(prefix + "§a已关闭投票");
                     } else {
                         sender.sendMessage(prefix + "§c没有正在进行的投票");
@@ -138,7 +140,7 @@ public class vote implements CommandExecutor {
                                 is_voting = true;
                                 kick_player = player;
                                 // 创建计时器对象
-                                TimerTask timerTask = new TimerTask();
+                                timerTask = new TimerTask();
 
                                 // 启动计时器，每秒执行一次
                                 timerTask.runTaskTimer(VoteKick.getPlugin(VoteKick.class), 0L, 20L);
