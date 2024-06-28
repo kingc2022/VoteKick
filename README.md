@@ -8,7 +8,7 @@
 <!-- TOC -->
 
 ## 支持的版本
-> Only Minecraft 1.20.1
+> Minecraft 1.20+
 
 ## 权限节点
 
